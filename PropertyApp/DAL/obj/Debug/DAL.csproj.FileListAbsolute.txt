@@ -1,0 +1,5 @@
+C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\DAL\bin\Debug\DAL.dll
+C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\DAL\bin\Debug\DAL.pdb
+C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\DAL\obj\Debug\DAL.csprojAssemblyReference.cache
+C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\DAL\obj\Debug\DAL.dll
+C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\DAL\obj\Debug\DAL.pdb
