@@ -39,11 +39,12 @@
             this.pnlProperty = new System.Windows.Forms.Panel();
             this.pnlPropertyType = new System.Windows.Forms.Panel();
             this.btnLog = new System.Windows.Forms.Button();
-            this.btnProperty = new System.Windows.Forms.Button();
+            this.btnProfile = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPropertyType = new System.Windows.Forms.Button();
+            this.btnApply = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.ucTenant1 = new PropertyApp.ucTenant();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -113,9 +114,9 @@
             this.panel2.Controls.Add(this.pnlProperty);
             this.panel2.Controls.Add(this.pnlPropertyType);
             this.panel2.Controls.Add(this.btnLog);
-            this.panel2.Controls.Add(this.btnProperty);
+            this.panel2.Controls.Add(this.btnProfile);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnPropertyType);
+            this.panel2.Controls.Add(this.btnApply);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 106);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -159,17 +160,17 @@
             this.btnLog.Text = "Logout";
             this.btnLog.UseVisualStyleBackColor = true;
             // 
-            // btnProperty
+            // btnProfile
             // 
-            this.btnProperty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnProperty.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
-            this.btnProperty.ForeColor = System.Drawing.Color.Gold;
-            this.btnProperty.Location = new System.Drawing.Point(14, 94);
-            this.btnProperty.Name = "btnProperty";
-            this.btnProperty.Size = new System.Drawing.Size(187, 48);
-            this.btnProperty.TabIndex = 2;
-            this.btnProperty.Text = "Property";
-            this.btnProperty.UseVisualStyleBackColor = true;
+            this.btnProfile.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnProfile.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
+            this.btnProfile.ForeColor = System.Drawing.Color.Gold;
+            this.btnProfile.Location = new System.Drawing.Point(14, 94);
+            this.btnProfile.Name = "btnProfile";
+            this.btnProfile.Size = new System.Drawing.Size(187, 48);
+            this.btnProfile.TabIndex = 2;
+            this.btnProfile.Text = "My Details";
+            this.btnProfile.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -182,17 +183,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Manage:";
             // 
-            // btnPropertyType
+            // btnApply
             // 
-            this.btnPropertyType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPropertyType.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
-            this.btnPropertyType.ForeColor = System.Drawing.Color.Gold;
-            this.btnPropertyType.Location = new System.Drawing.Point(14, 45);
-            this.btnPropertyType.Name = "btnPropertyType";
-            this.btnPropertyType.Size = new System.Drawing.Size(187, 48);
-            this.btnPropertyType.TabIndex = 0;
-            this.btnPropertyType.Text = "Property Type";
-            this.btnPropertyType.UseVisualStyleBackColor = true;
+            this.btnApply.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnApply.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
+            this.btnApply.ForeColor = System.Drawing.Color.Gold;
+            this.btnApply.Location = new System.Drawing.Point(14, 45);
+            this.btnApply.Name = "btnApply";
+            this.btnApply.Size = new System.Drawing.Size(187, 48);
+            this.btnApply.TabIndex = 0;
+            this.btnApply.Text = "Apply";
+            this.btnApply.UseVisualStyleBackColor = true;
+            this.btnApply.Click += new System.EventHandler(this.btnApply_Click);
             // 
             // panel3
             // 
@@ -213,11 +215,19 @@
             this.panel5.Size = new System.Drawing.Size(12, 473);
             this.panel5.TabIndex = 4;
             // 
+            // ucTenant1
+            // 
+            this.ucTenant1.Location = new System.Drawing.Point(297, 118);
+            this.ucTenant1.Name = "ucTenant1";
+            this.ucTenant1.Size = new System.Drawing.Size(768, 453);
+            this.ucTenant1.TabIndex = 5;
+            // 
             // frmTenant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 591);
+            this.Controls.Add(this.ucTenant1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -245,10 +255,11 @@
         private System.Windows.Forms.Panel pnlProperty;
         private System.Windows.Forms.Panel pnlPropertyType;
         private System.Windows.Forms.Button btnLog;
-        private System.Windows.Forms.Button btnProperty;
+        private System.Windows.Forms.Button btnProfile;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPropertyType;
+        private System.Windows.Forms.Button btnApply;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
+        private ucTenant ucTenant1;
     }
 }

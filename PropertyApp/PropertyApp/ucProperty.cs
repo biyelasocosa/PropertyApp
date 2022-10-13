@@ -35,19 +35,32 @@ namespace PropertyApp
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                MemoryStream ms = new MemoryStream();
+                imgProperty.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                byte[] image = ms.GetBuffer();
 
-            
-            //Property propty = new Property(txtDescription.Text, double.Parse(txtPrice.Text.ToString()),image, int.Parse(cmbPropertyType.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString(), int.Parse(cmbSurbub.SelectedValue.ToString()));
-            //int x = bll.InsertProperty(propty);
-            //if(x > 0)
-            //{
-            //    MessageBox.Show(x + " Saved");
-            //}
+                Property property = new Property(txtDescription.Text, double.Parse(txtPrice.Text.ToString()), image, int.Parse(cmbPropertyType.SelectedValue.ToString()), cmbStatus.SelectedItem.ToString(), int.Parse(cmbSurbub.SelectedValue.ToString()));
+                int x = bll.InsertPropety(property);
+                if(x > 0)
+                {
+                    MessageBox.Show(x + " Saved");
+                }
+                
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Something Went Wrong");
+            }
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-
+            int propertyId;
+            Int32.TryParse(dgvProperty.SelectedRows[0].Cells["PropertyID"].Value.ToString(), out propertyId);
+            Property property = new Property(propertyId, int.Parse(cmbPropertyType.SelectedValue.ToString()), double.Parse(txtPrice.Text), cmbStatus.SelectedItem.ToString());
+            
         }
 
         private void btnList_Click(object sender, EventArgs e)

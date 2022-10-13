@@ -16,5 +16,19 @@ namespace PropertyApp
         {
             InitializeComponent();
         }
+
+        private void btnRental_Click(object sender, EventArgs e)
+        {
+            ucRental1.BringToFront();
+            pnlRental.BackColor = Color.Gold;
+            pnlProperty.BackColor = Color.MidnightBlue;
+        }
+
+        private void btnProperty_Click(object sender, EventArgs e)
+        {
+            ucProperty1.BringToFront();
+            pnlProperty.BackColor = Color.Gold;
+            pnlRental.BackColor = Color.MidnightBlue;
+        }
     }
 }

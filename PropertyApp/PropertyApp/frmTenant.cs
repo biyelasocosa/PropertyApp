@@ -16,5 +16,10 @@ namespace PropertyApp
         {
             InitializeComponent();
         }
+
+        private void btnApply_Click(object sender, EventArgs e)
+        {
+            ucTenant1.BringToFront();
+        }
     }
 }

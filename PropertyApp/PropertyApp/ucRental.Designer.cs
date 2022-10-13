@@ -59,7 +59,7 @@
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Font = new System.Drawing.Font("Mongolian Baiti", 10.75F);
             this.groupBox1.Location = new System.Drawing.Point(7, 14);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(751, 432);
@@ -72,7 +72,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(76, 38);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(53, 14);
+            this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Property";
             // 
@@ -81,7 +81,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(77, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 14);
+            this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Tenant";
             // 
@@ -90,7 +90,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(78, 124);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 14);
+            this.label3.Size = new System.Drawing.Size(69, 16);
             this.label3.TabIndex = 2;
             this.label3.Text = "Start Date";
             // 
@@ -99,7 +99,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(77, 162);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(57, 14);
+            this.label4.Size = new System.Drawing.Size(66, 16);
             this.label4.TabIndex = 3;
             this.label4.Text = "End Date";
             // 
@@ -108,7 +108,7 @@
             this.cmbProperty.FormattingEnabled = true;
             this.cmbProperty.Location = new System.Drawing.Point(282, 35);
             this.cmbProperty.Name = "cmbProperty";
-            this.cmbProperty.Size = new System.Drawing.Size(247, 22);
+            this.cmbProperty.Size = new System.Drawing.Size(247, 23);
             this.cmbProperty.TabIndex = 4;
             // 
             // cmbTenant
@@ -116,21 +116,21 @@
             this.cmbTenant.FormattingEnabled = true;
             this.cmbTenant.Location = new System.Drawing.Point(282, 78);
             this.cmbTenant.Name = "cmbTenant";
-            this.cmbTenant.Size = new System.Drawing.Size(247, 22);
+            this.cmbTenant.Size = new System.Drawing.Size(247, 23);
             this.cmbTenant.TabIndex = 5;
             // 
             // dtpStartDate
             // 
             this.dtpStartDate.Location = new System.Drawing.Point(282, 117);
             this.dtpStartDate.Name = "dtpStartDate";
-            this.dtpStartDate.Size = new System.Drawing.Size(269, 22);
+            this.dtpStartDate.Size = new System.Drawing.Size(269, 24);
             this.dtpStartDate.TabIndex = 6;
             // 
             // dtpEndDate
             // 
             this.dtpEndDate.Location = new System.Drawing.Point(282, 156);
             this.dtpEndDate.Name = "dtpEndDate";
-            this.dtpEndDate.Size = new System.Drawing.Size(269, 22);
+            this.dtpEndDate.Size = new System.Drawing.Size(269, 24);
             this.dtpEndDate.TabIndex = 7;
             // 
             // btnSave
@@ -171,6 +171,7 @@
             this.dgvRental.Name = "dgvRental";
             this.dgvRental.Size = new System.Drawing.Size(695, 204);
             this.dgvRental.TabIndex = 11;
+            this.dgvRental.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRental_CellClick);
             // 
             // ucRental
             // 

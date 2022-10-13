@@ -7,4 +7,3 @@ C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\DAL\bin\Debug\DAL.dl
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\DAL\bin\Debug\DAL.pdb
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\DAL\obj\Debug\DAL.dll
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\DAL\obj\Debug\DAL.pdb
-C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\DAL\obj\Debug\DAL.csprojAssemblyReference.cache

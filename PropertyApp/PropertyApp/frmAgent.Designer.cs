@@ -36,17 +36,16 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pnlLogout = new System.Windows.Forms.Panel();
-            this.pnlAgent = new System.Windows.Forms.Panel();
             this.pnlProperty = new System.Windows.Forms.Panel();
-            this.pnlPropertyType = new System.Windows.Forms.Panel();
+            this.pnlRental = new System.Windows.Forms.Panel();
             this.btnLog = new System.Windows.Forms.Button();
-            this.btnAgent = new System.Windows.Forms.Button();
             this.btnProperty = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnPropertyType = new System.Windows.Forms.Button();
+            this.btnRental = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ucProperty1 = new PropertyApp.ucProperty();
+            this.ucRental1 = new PropertyApp.ucRental();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -113,14 +112,12 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
             this.panel2.Controls.Add(this.pnlLogout);
-            this.panel2.Controls.Add(this.pnlAgent);
             this.panel2.Controls.Add(this.pnlProperty);
-            this.panel2.Controls.Add(this.pnlPropertyType);
+            this.panel2.Controls.Add(this.pnlRental);
             this.panel2.Controls.Add(this.btnLog);
-            this.panel2.Controls.Add(this.btnAgent);
             this.panel2.Controls.Add(this.btnProperty);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Controls.Add(this.btnPropertyType);
+            this.panel2.Controls.Add(this.btnRental);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 106);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -131,18 +128,10 @@
             // pnlLogout
             // 
             this.pnlLogout.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlLogout.Location = new System.Drawing.Point(3, 194);
+            this.pnlLogout.Location = new System.Drawing.Point(3, 146);
             this.pnlLogout.Name = "pnlLogout";
             this.pnlLogout.Size = new System.Drawing.Size(10, 47);
             this.pnlLogout.TabIndex = 10;
-            // 
-            // pnlAgent
-            // 
-            this.pnlAgent.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlAgent.Location = new System.Drawing.Point(3, 145);
-            this.pnlAgent.Name = "pnlAgent";
-            this.pnlAgent.Size = new System.Drawing.Size(10, 47);
-            this.pnlAgent.TabIndex = 10;
             // 
             // pnlProperty
             // 
@@ -152,37 +141,25 @@
             this.pnlProperty.Size = new System.Drawing.Size(10, 47);
             this.pnlProperty.TabIndex = 10;
             // 
-            // pnlPropertyType
+            // pnlRental
             // 
-            this.pnlPropertyType.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlPropertyType.Location = new System.Drawing.Point(3, 45);
-            this.pnlPropertyType.Name = "pnlPropertyType";
-            this.pnlPropertyType.Size = new System.Drawing.Size(10, 47);
-            this.pnlPropertyType.TabIndex = 9;
+            this.pnlRental.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlRental.Location = new System.Drawing.Point(3, 45);
+            this.pnlRental.Name = "pnlRental";
+            this.pnlRental.Size = new System.Drawing.Size(10, 47);
+            this.pnlRental.TabIndex = 9;
             // 
             // btnLog
             // 
             this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLog.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
             this.btnLog.ForeColor = System.Drawing.Color.Gold;
-            this.btnLog.Location = new System.Drawing.Point(14, 194);
+            this.btnLog.Location = new System.Drawing.Point(14, 146);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(187, 48);
             this.btnLog.TabIndex = 6;
             this.btnLog.Text = "Logout";
             this.btnLog.UseVisualStyleBackColor = true;
-            // 
-            // btnAgent
-            // 
-            this.btnAgent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgent.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
-            this.btnAgent.ForeColor = System.Drawing.Color.Gold;
-            this.btnAgent.Location = new System.Drawing.Point(14, 144);
-            this.btnAgent.Name = "btnAgent";
-            this.btnAgent.Size = new System.Drawing.Size(187, 48);
-            this.btnAgent.TabIndex = 5;
-            this.btnAgent.Text = "Agent";
-            this.btnAgent.UseVisualStyleBackColor = true;
             // 
             // btnProperty
             // 
@@ -195,6 +172,7 @@
             this.btnProperty.TabIndex = 2;
             this.btnProperty.Text = "Property";
             this.btnProperty.UseVisualStyleBackColor = true;
+            this.btnProperty.Click += new System.EventHandler(this.btnProperty_Click);
             // 
             // label1
             // 
@@ -207,17 +185,18 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Manage:";
             // 
-            // btnPropertyType
+            // btnRental
             // 
-            this.btnPropertyType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPropertyType.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
-            this.btnPropertyType.ForeColor = System.Drawing.Color.Gold;
-            this.btnPropertyType.Location = new System.Drawing.Point(14, 45);
-            this.btnPropertyType.Name = "btnPropertyType";
-            this.btnPropertyType.Size = new System.Drawing.Size(187, 48);
-            this.btnPropertyType.TabIndex = 0;
-            this.btnPropertyType.Text = "Property Type";
-            this.btnPropertyType.UseVisualStyleBackColor = true;
+            this.btnRental.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRental.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
+            this.btnRental.ForeColor = System.Drawing.Color.Gold;
+            this.btnRental.Location = new System.Drawing.Point(14, 45);
+            this.btnRental.Name = "btnRental";
+            this.btnRental.Size = new System.Drawing.Size(187, 48);
+            this.btnRental.TabIndex = 0;
+            this.btnRental.Text = "Rental";
+            this.btnRental.UseVisualStyleBackColor = true;
+            this.btnRental.Click += new System.EventHandler(this.btnRental_Click);
             // 
             // panel3
             // 
@@ -245,11 +224,19 @@
             this.ucProperty1.Size = new System.Drawing.Size(768, 453);
             this.ucProperty1.TabIndex = 5;
             // 
+            // ucRental1
+            // 
+            this.ucRental1.Location = new System.Drawing.Point(299, 117);
+            this.ucRental1.Name = "ucRental1";
+            this.ucRental1.Size = new System.Drawing.Size(768, 453);
+            this.ucRental1.TabIndex = 6;
+            // 
             // frmAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 591);
+            this.Controls.Add(this.ucRental1);
             this.Controls.Add(this.ucProperty1);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
@@ -275,16 +262,15 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel pnlLogout;
-        private System.Windows.Forms.Panel pnlAgent;
         private System.Windows.Forms.Panel pnlProperty;
-        private System.Windows.Forms.Panel pnlPropertyType;
+        private System.Windows.Forms.Panel pnlRental;
         private System.Windows.Forms.Button btnLog;
-        private System.Windows.Forms.Button btnAgent;
         private System.Windows.Forms.Button btnProperty;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnPropertyType;
+        private System.Windows.Forms.Button btnRental;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private ucProperty ucProperty1;
+        private ucRental ucRental1;
     }
 }

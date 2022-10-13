@@ -141,6 +141,21 @@ namespace DAL
             return x;
 
         }
+        public int UpdateProperty(Property propty)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_UpdateProperty", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@PropertyID", propty.ID);
+            dbCmd.Parameters.AddWithValue("@PropertyType", propty.PropertyType);
+            dbCmd.Parameters.AddWithValue("@Price", propty.Price);
+            dbCmd.Parameters.AddWithValue("@Status", propty.Status);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
         public DataTable GetProperty()
         {
             dbCon.Open();
@@ -237,6 +252,7 @@ namespace DAL
             dbCon.Close();
             return x;
         }
+        //Rental
         public int InsertRental(Rental rent)
         {
             dbCon.Open();
@@ -258,6 +274,7 @@ namespace DAL
             dbCmd = new SqlCommand("sp_UpdateRental", dbCon);
             dbCmd.CommandType = CommandType.StoredProcedure;
 
+            dbCmd.Parameters.AddWithValue("@RentalID", rent.ID);
             dbCmd.Parameters.AddWithValue("@StartDate", rent.StartDate);
             dbCmd.Parameters.AddWithValue("@EndDate", rent.EndDate);
 
@@ -276,6 +293,64 @@ namespace DAL
 
             dbCon.Close();
             return dt;
+        }
+        //Tenant
+        public int InsertTenant(Tenant ten)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_InsertTenant", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Name", ten.Name);
+            dbCmd.Parameters.AddWithValue("@Surname", ten.Surname);
+            dbCmd.Parameters.AddWithValue("@Email", ten.Email);
+            dbCmd.Parameters.AddWithValue("Password", ten.Password);
+            dbCmd.Parameters.AddWithValue("@Phone", ten.Phone);
+            dbCmd.Parameters.AddWithValue("@Status", ten.Status);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public int UpdateTenant(Tenant ten)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_UpdateTenant", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@TenantID", ten.ID);
+            dbCmd.Parameters.AddWithValue("@Email", ten.Email);
+            dbCmd.Parameters.AddWithValue("@Phone", ten.Phone);
+            dbCmd.Parameters.AddWithValue("@Status", ten.Status);
+
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public DataTable GetTenant()
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetTenant", dbCon);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public int DeleteTenant(int tenantId)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_DeleteTenant", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@TenantID", tenantId);
+            int x = dbCmd.ExecuteNonQuery();
+
+            dbCon.Close();
+            return x;
         }
         public DataTable Login(string email, string password)
         {

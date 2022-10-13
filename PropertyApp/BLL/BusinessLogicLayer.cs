@@ -57,6 +57,10 @@ namespace BLL
         {
             return dal.GetProperty();
         }
+        public int UpdateProperty(Property propty)
+        {
+            return dal.UpdateProperty(propty);
+        }
         //Agency
         public int InsertAgency(Agency agency)
         {
@@ -83,6 +87,7 @@ namespace BLL
         {
             return dal.DeleteAgent(agentID);
         }
+        //Rental
         public int InsertRental(Rental rent)
         {
             return dal.InsertRental(rent);
@@ -94,6 +99,23 @@ namespace BLL
         public DataTable GetRental()
         {
             return dal.GetRental();
+        }
+        //Tenant
+        public int InsertTenant(Tenant ten)
+        {
+            return dal.InsertTenant(ten);
+        }
+        public int UpdateTenant(Tenant ten)
+        {
+            return dal.UpdateTenant(ten);
+        }
+        public DataTable GetTenant()
+        {
+            return dal.GetTenant();
+        }
+        public int DeleteTenant(int tenantId)
+        {
+            return dal.DeleteTenant(tenantId);
         }
         //Login
         public DataTable Login(string email, string password)

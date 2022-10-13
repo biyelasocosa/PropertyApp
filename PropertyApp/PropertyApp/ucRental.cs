@@ -66,5 +66,16 @@ namespace PropertyApp
         {
             dgvRental.DataSource = bll.GetRental();
         }
+
+        private void dgvRental_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvRental.SelectedRows.Count > 0)
+            {
+                cmbProperty.Text = dgvRental.SelectedRows[0].Cells["Description"].Value.ToString();
+                cmbTenant.Text = dgvRental.SelectedRows[0].Cells["FullName"].Value.ToString();
+                dtpStartDate.Text = dgvRental.SelectedRows[0].Cells["StartDate"].Value.ToString();
+                dtpEndDate.Text = dgvRental.SelectedRows[0].Cells["EndDate"].Value.ToString();
+            }
+        }
     }
 }

@@ -11,11 +11,11 @@ namespace DAL
         public int ID { get; set; }
         public string Description { get; set; }
         public double Price { get; set; }
-        public byte Image { get; set; }
+        public byte[] Image { get; set; }
         public int PropertyType { get; set; }
         public string Status { get; set; }
         public int Surbub { get; set; }
-        public Property(string desc, double price, byte img, int propertytype, string status, int surbub)
+        public Property(string desc, double price, byte[] img, int propertytype, string status, int surbub)
         {
             this.Description = desc;
             this.Price = price;
@@ -23,6 +23,13 @@ namespace DAL
             this.PropertyType = propertytype;
             this.Status = status;
             this.Surbub = surbub;
+        }
+        public Property(int id, int type, double price, string status)
+        {
+            this.ID = id;
+            this.PropertyType = type;
+            this.Price = price;
+            this.Status = status;
         }
     }
 }
