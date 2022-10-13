@@ -237,6 +237,46 @@ namespace DAL
             dbCon.Close();
             return x;
         }
+        public int InsertRental(Rental rent)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_InsertRental", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Property", rent.Property) ;
+            dbCmd.Parameters.AddWithValue("@Tenant", rent.Tenant);
+            dbCmd.Parameters.AddWithValue("@StartDate", rent.StartDate);
+            dbCmd.Parameters.AddWithValue("@EndDate", rent.EndDate); 
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public int UpdateRental(Rental rent)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_UpdateRental", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@StartDate", rent.StartDate);
+            dbCmd.Parameters.AddWithValue("@EndDate", rent.EndDate);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public DataTable GetRental()
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetRental", dbCon);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
         public DataTable Login(string email, string password)
         {
             dbCon.Open();

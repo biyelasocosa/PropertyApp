@@ -42,3 +42,7 @@ C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debu
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.csproj.CopyComplete
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.exe
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.pdb
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.frmAgent.resources
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.frmTenant.resources
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.ucRental.resources
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.ucTenant.resources

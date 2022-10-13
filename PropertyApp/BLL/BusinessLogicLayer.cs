@@ -83,6 +83,18 @@ namespace BLL
         {
             return dal.DeleteAgent(agentID);
         }
+        public int InsertRental(Rental rent)
+        {
+            return dal.InsertRental(rent);
+        }
+        public int UpdateRental(Rental rent)
+        {
+            return dal.UpdateRental(rent);
+        }
+        public DataTable GetRental()
+        {
+            return dal.GetRental();
+        }
         //Login
         public DataTable Login(string email, string password)
         {

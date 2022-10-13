@@ -43,6 +43,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPropertyType = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -203,11 +204,21 @@
             this.panel3.Size = new System.Drawing.Size(889, 12);
             this.panel3.TabIndex = 3;
             // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.Gold;
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel5.Location = new System.Drawing.Point(1085, 106);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(12, 473);
+            this.panel5.TabIndex = 4;
+            // 
             // frmTenant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1097, 591);
+            this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -238,5 +249,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPropertyType;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel5;
     }
 }

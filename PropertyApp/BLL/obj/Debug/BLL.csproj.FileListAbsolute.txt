@@ -6,3 +6,11 @@ C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\BLL\obj\Debug\BLL.csproj
 C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\BLL\obj\Debug\BLL.dll
 C:\Users\Biyela Socosa\source\repos\Project\PropertyApp\BLL\obj\Debug\BLL.pdb
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\bin\Debug\BLL.dll
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\bin\Debug\BLL.pdb
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\bin\Debug\DAL.dll
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\bin\Debug\DAL.pdb
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\obj\Debug\BLL.csprojAssemblyReference.cache
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\obj\Debug\BLL.dll
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\BLL\obj\Debug\BLL.pdb
