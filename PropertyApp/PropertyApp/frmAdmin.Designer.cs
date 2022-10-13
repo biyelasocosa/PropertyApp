@@ -30,10 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlLogout = new System.Windows.Forms.Panel();
+            this.pnlAgent = new System.Windows.Forms.Panel();
+            this.pnlAgency = new System.Windows.Forms.Panel();
+            this.pnlSurbub = new System.Windows.Forms.Panel();
+            this.pnlCity = new System.Windows.Forms.Panel();
+            this.pnlProvince = new System.Windows.Forms.Panel();
+            this.pnlProperty = new System.Windows.Forms.Panel();
+            this.pnlPropertyType = new System.Windows.Forms.Panel();
             this.btnSurbub = new System.Windows.Forms.Button();
             this.btnCity = new System.Windows.Forms.Button();
             this.btnLog = new System.Windows.Forms.Button();
@@ -46,7 +55,6 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
             this.ucAgent1 = new PropertyApp.ucAgent();
             this.ucAgency1 = new PropertyApp.ucAgency();
             this.ucSurbub1 = new PropertyApp.ucSurbub();
@@ -54,14 +62,6 @@
             this.ucProvince1 = new PropertyApp.ucProvince();
             this.ucProperty1 = new PropertyApp.ucProperty();
             this.ucPropertyType1 = new PropertyApp.ucPropertyType();
-            this.pnlPropertyType = new System.Windows.Forms.Panel();
-            this.pnlProperty = new System.Windows.Forms.Panel();
-            this.pnlProvince = new System.Windows.Forms.Panel();
-            this.pnlCity = new System.Windows.Forms.Panel();
-            this.pnlSurbub = new System.Windows.Forms.Panel();
-            this.pnlAgency = new System.Windows.Forms.Panel();
-            this.pnlAgent = new System.Windows.Forms.Panel();
-            this.pnlLogout = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -81,6 +81,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1097, 106);
             this.panel1.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(161, 45);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(132, 23);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "PropertyApp";
             // 
             // label2
             // 
@@ -140,6 +151,70 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(208, 485);
             this.panel2.TabIndex = 1;
+            // 
+            // pnlLogout
+            // 
+            this.pnlLogout.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlLogout.Location = new System.Drawing.Point(3, 400);
+            this.pnlLogout.Name = "pnlLogout";
+            this.pnlLogout.Size = new System.Drawing.Size(10, 47);
+            this.pnlLogout.TabIndex = 10;
+            // 
+            // pnlAgent
+            // 
+            this.pnlAgent.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlAgent.Location = new System.Drawing.Point(3, 349);
+            this.pnlAgent.Name = "pnlAgent";
+            this.pnlAgent.Size = new System.Drawing.Size(10, 47);
+            this.pnlAgent.TabIndex = 10;
+            // 
+            // pnlAgency
+            // 
+            this.pnlAgency.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlAgency.Location = new System.Drawing.Point(3, 298);
+            this.pnlAgency.Name = "pnlAgency";
+            this.pnlAgency.Size = new System.Drawing.Size(10, 47);
+            this.pnlAgency.TabIndex = 10;
+            // 
+            // pnlSurbub
+            // 
+            this.pnlSurbub.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlSurbub.Location = new System.Drawing.Point(3, 246);
+            this.pnlSurbub.Name = "pnlSurbub";
+            this.pnlSurbub.Size = new System.Drawing.Size(10, 47);
+            this.pnlSurbub.TabIndex = 10;
+            // 
+            // pnlCity
+            // 
+            this.pnlCity.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlCity.Location = new System.Drawing.Point(3, 196);
+            this.pnlCity.Name = "pnlCity";
+            this.pnlCity.Size = new System.Drawing.Size(10, 47);
+            this.pnlCity.TabIndex = 10;
+            // 
+            // pnlProvince
+            // 
+            this.pnlProvince.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlProvince.Location = new System.Drawing.Point(3, 145);
+            this.pnlProvince.Name = "pnlProvince";
+            this.pnlProvince.Size = new System.Drawing.Size(10, 47);
+            this.pnlProvince.TabIndex = 11;
+            // 
+            // pnlProperty
+            // 
+            this.pnlProperty.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlProperty.Location = new System.Drawing.Point(3, 95);
+            this.pnlProperty.Name = "pnlProperty";
+            this.pnlProperty.Size = new System.Drawing.Size(10, 47);
+            this.pnlProperty.TabIndex = 10;
+            // 
+            // pnlPropertyType
+            // 
+            this.pnlPropertyType.BackColor = System.Drawing.Color.MidnightBlue;
+            this.pnlPropertyType.Location = new System.Drawing.Point(3, 45);
+            this.pnlPropertyType.Name = "pnlPropertyType";
+            this.pnlPropertyType.Size = new System.Drawing.Size(10, 47);
+            this.pnlPropertyType.TabIndex = 9;
             // 
             // btnSurbub
             // 
@@ -289,17 +364,6 @@
             this.panel6.Size = new System.Drawing.Size(768, 453);
             this.panel6.TabIndex = 4;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Mongolian Baiti", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(161, 45);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(132, 23);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "PropertyApp";
-            // 
             // ucAgent1
             // 
             this.ucAgent1.Location = new System.Drawing.Point(30, 5);
@@ -348,70 +412,6 @@
             this.ucPropertyType1.Name = "ucPropertyType1";
             this.ucPropertyType1.Size = new System.Drawing.Size(768, 453);
             this.ucPropertyType1.TabIndex = 0;
-            // 
-            // pnlPropertyType
-            // 
-            this.pnlPropertyType.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlPropertyType.Location = new System.Drawing.Point(3, 45);
-            this.pnlPropertyType.Name = "pnlPropertyType";
-            this.pnlPropertyType.Size = new System.Drawing.Size(10, 47);
-            this.pnlPropertyType.TabIndex = 9;
-            // 
-            // pnlProperty
-            // 
-            this.pnlProperty.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlProperty.Location = new System.Drawing.Point(3, 95);
-            this.pnlProperty.Name = "pnlProperty";
-            this.pnlProperty.Size = new System.Drawing.Size(10, 47);
-            this.pnlProperty.TabIndex = 10;
-            // 
-            // pnlProvince
-            // 
-            this.pnlProvince.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlProvince.Location = new System.Drawing.Point(3, 145);
-            this.pnlProvince.Name = "pnlProvince";
-            this.pnlProvince.Size = new System.Drawing.Size(10, 47);
-            this.pnlProvince.TabIndex = 11;
-            // 
-            // pnlCity
-            // 
-            this.pnlCity.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlCity.Location = new System.Drawing.Point(3, 196);
-            this.pnlCity.Name = "pnlCity";
-            this.pnlCity.Size = new System.Drawing.Size(10, 47);
-            this.pnlCity.TabIndex = 10;
-            // 
-            // pnlSurbub
-            // 
-            this.pnlSurbub.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlSurbub.Location = new System.Drawing.Point(3, 246);
-            this.pnlSurbub.Name = "pnlSurbub";
-            this.pnlSurbub.Size = new System.Drawing.Size(10, 47);
-            this.pnlSurbub.TabIndex = 10;
-            // 
-            // pnlAgency
-            // 
-            this.pnlAgency.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlAgency.Location = new System.Drawing.Point(3, 298);
-            this.pnlAgency.Name = "pnlAgency";
-            this.pnlAgency.Size = new System.Drawing.Size(10, 47);
-            this.pnlAgency.TabIndex = 10;
-            // 
-            // pnlAgent
-            // 
-            this.pnlAgent.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlAgent.Location = new System.Drawing.Point(3, 349);
-            this.pnlAgent.Name = "pnlAgent";
-            this.pnlAgent.Size = new System.Drawing.Size(10, 47);
-            this.pnlAgent.TabIndex = 10;
-            // 
-            // pnlLogout
-            // 
-            this.pnlLogout.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlLogout.Location = new System.Drawing.Point(3, 400);
-            this.pnlLogout.Name = "pnlLogout";
-            this.pnlLogout.Size = new System.Drawing.Size(10, 47);
-            this.pnlLogout.TabIndex = 10;
             // 
             // frmAdmin
             // 

@@ -33,9 +33,9 @@ namespace PropertyApp
         private void btnLogin_Click(object sender, EventArgs e)
         {
             DataTable dt = bll.Login(txtEmail.Text, txtPassword.Text);
-            string role = dt.Rows[0]["RoleDescription"].ToString();
             if (dt.Rows.Count > 0)
             {
+                string role = dt.Rows[0]["RoleDescription"].ToString();
                 if (role == "Admin")
                 {
                     frmAdmin form = new frmAdmin();
