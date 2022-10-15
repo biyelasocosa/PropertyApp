@@ -27,31 +27,36 @@ namespace PropertyApp
         BusinessLogicLayer bll = new BusinessLogicLayer();
         private void frmLogin_Load(object sender, EventArgs e)
         {
-
+            
         }
 
+        public static DataTable dtLog = null;
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            DataTable dt = bll.Login(txtEmail.Text, txtPassword.Text);
-            if (dt.Rows.Count > 0)
+            dtLog = bll.Login(txtEmail.Text, txtPassword.Text);
+            if (dtLog.Rows.Count > 0)
             {
-                string role = dt.Rows[0]["RoleDescription"].ToString();
-                if (role == "Admin")
+                string user = dtLog.Rows[0]["Description"].ToString();
+                if (user == "Admin")
                 {
-                    frmAdmin form = new frmAdmin();
-                    form.Show();
+                    frmAdmin admin = new frmAdmin();
+                    admin.Show();
                     this.Hide();
                 }
-                else if (role == "Agent")
+                else if (user == "Agent")
                 {
-
+                    frmAgent agent = new frmAgent();
+                    agent.Show();
+                    this.Hide();
                 }
-                else if (role == "Tenant")
+                else if (user == "Tenant")
                 {
-
+                    frmTenant tenant = new frmTenant();
+                    tenant.Show();
+                    this.Hide();
                 }
             }
-            else if (dt.Rows.Count == 0)
+            else if (dtLog.Rows.Count == 0)
             {
                 txtEmail.Clear();
                 txtPassword.Clear();

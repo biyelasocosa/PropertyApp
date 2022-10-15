@@ -19,7 +19,10 @@ namespace PropertyApp
 
         private void frmAdmin_Load(object sender, EventArgs e)
         {
-
+            DataTable dt = frmLogin.dtLog;
+            lblAdminID.Text = dt.Rows[0]["UserID"].ToString();
+            lblFullname.Text = dt.Rows[0]["Name"].ToString() + " " + dt.Rows[0]["Surname"].ToString();
+            lblUser.Text = "(" + dt.Rows[0]["Description"].ToString() + ")";
         }
 
         private void btnPropertyType_Click(object sender, EventArgs e)
@@ -116,7 +119,7 @@ namespace PropertyApp
 
         private void btnLog_Click(object sender, EventArgs e)
         {
-            
+            frmLogin.dtLog = null;
             frmLogin log = new frmLogin();
             log.Show();
             this.Hide();
