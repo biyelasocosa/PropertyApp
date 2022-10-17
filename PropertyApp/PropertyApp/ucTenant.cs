@@ -31,7 +31,7 @@ namespace PropertyApp
         }
         private void btnApply_Click(object sender, EventArgs e)
         {
-            Tenant ten = new Tenant(txtName.Text, txtSurname.Text, txtEmail.Text, txtPassword.Text, txtPhone.Text, cmbStatus.SelectedItem.ToString());
+            Tenant ten = new Tenant(txtName.Text, txtSurname.Text, txtEmail.Text, txtPassword.Text, txtPhone.Text, cmbStatus.SelectedItem.ToString(), 3);
             int x = bll.InsertTenant(ten);
             if(x > 0)
             {

@@ -19,7 +19,7 @@ namespace PropertyApp
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            ucTenant1.BringToFront();
+            //ucTenant1.BringToFront();
         }
 
         private void frmTenant_Load(object sender, EventArgs e)
@@ -28,6 +28,19 @@ namespace PropertyApp
             lblUserID.Text = dt.Rows[0]["UserID"].ToString();
             lblFullname.Text = dt.Rows[0]["Name"].ToString() + " " + dt.Rows[0]["Surname"].ToString();
             lblUser.Text = "(" + dt.Rows[0]["Description"].ToString() + ")";
+
+            ucDefault1.BringToFront();
+        }
+
+        private void btnProperty_Click(object sender, EventArgs e)
+        {
+            ucPropertyList1.BringToFront();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmTenant form = new frmTenant();
+            form.Refresh();
         }
     }
 }

@@ -22,6 +22,8 @@ namespace PropertyApp
             ucRental1.BringToFront();
             pnlRental.BackColor = Color.Gold;
             pnlProperty.BackColor = Color.MidnightBlue;
+            pnlAgent.BackColor = Color.MidnightBlue;
+            pnlPropertyAgent.BackColor = Color.MidnightBlue;
         }
 
         private void btnProperty_Click(object sender, EventArgs e)
@@ -29,6 +31,8 @@ namespace PropertyApp
             ucProperty1.BringToFront();
             pnlProperty.BackColor = Color.Gold;
             pnlRental.BackColor = Color.MidnightBlue;
+            pnlAgent.BackColor = Color.MidnightBlue;
+            pnlPropertyAgent.BackColor = Color.MidnightBlue;
         }
 
         private void btnLog_Click(object sender, EventArgs e)
@@ -45,6 +49,28 @@ namespace PropertyApp
             lblUserID.Text = dt.Rows[0]["UserID"].ToString();
             lblFullname.Text = dt.Rows[0]["Name"].ToString() + " " + dt.Rows[0]["Surname"].ToString();
             lblUser.Text = "(" + dt.Rows[0]["Description"].ToString() + ")";
+
+            ucDefault1.BringToFront();
+        }
+
+        private void btnAgent_Click(object sender, EventArgs e)
+        {
+            ucAgent1.BringToFront();
+            pnlRental.BackColor = Color.MidnightBlue; ;
+            pnlProperty.BackColor = Color.MidnightBlue;
+            pnlAgent.BackColor = Color.Gold;
+            pnlPropertyAgent.BackColor = Color.MidnightBlue;
+        }
+
+        private void btnPropertyAgent_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmAgent form = new frmAgent();
+            form.Refresh();
         }
     }
 }

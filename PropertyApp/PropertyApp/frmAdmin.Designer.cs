@@ -30,11 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
             this.lblFullname = new System.Windows.Forms.Label();
-            this.lblAdminID = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.lblAdminID = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -59,6 +60,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.ucDefault1 = new PropertyApp.ucDefault();
             this.ucAgent1 = new PropertyApp.ucAgent();
             this.ucAgency1 = new PropertyApp.ucAgency();
             this.ucSurbub1 = new PropertyApp.ucSurbub();
@@ -66,13 +68,12 @@
             this.ucProvince1 = new PropertyApp.ucProvince();
             this.ucProperty1 = new PropertyApp.ucProperty();
             this.ucPropertyType1 = new PropertyApp.ucPropertyType();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -89,15 +90,25 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1097, 106);
+            this.panel1.Size = new System.Drawing.Size(1162, 106);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(934, 39);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.lblUser);
             this.panel7.Controls.Add(this.lblFullname);
             this.panel7.Font = new System.Drawing.Font("Mongolian Baiti", 10.25F);
-            this.panel7.Location = new System.Drawing.Point(942, 40);
+            this.panel7.Location = new System.Drawing.Point(973, 40);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(150, 32);
             this.panel7.TabIndex = 6;
@@ -124,17 +135,6 @@
             this.lblFullname.TabIndex = 1;
             this.lblFullname.Text = "FullName";
             // 
-            // lblAdminID
-            // 
-            this.lblAdminID.AutoSize = true;
-            this.lblAdminID.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAdminID.Location = new System.Drawing.Point(959, 26);
-            this.lblAdminID.Name = "lblAdminID";
-            this.lblAdminID.Size = new System.Drawing.Size(18, 13);
-            this.lblAdminID.TabIndex = 0;
-            this.lblAdminID.Text = "ID";
-            this.lblAdminID.Visible = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -145,6 +145,17 @@
             this.label3.Size = new System.Drawing.Size(132, 23);
             this.label3.TabIndex = 5;
             this.label3.Text = "PropertyApp";
+            // 
+            // lblAdminID
+            // 
+            this.lblAdminID.AutoSize = true;
+            this.lblAdminID.ForeColor = System.Drawing.SystemColors.Control;
+            this.lblAdminID.Location = new System.Drawing.Point(990, 26);
+            this.lblAdminID.Name = "lblAdminID";
+            this.lblAdminID.Size = new System.Drawing.Size(18, 13);
+            this.lblAdminID.TabIndex = 0;
+            this.lblAdminID.Text = "ID";
+            this.lblAdminID.Visible = false;
             // 
             // label2
             // 
@@ -177,6 +188,7 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // panel2
             // 
@@ -202,7 +214,7 @@
             this.panel2.Location = new System.Drawing.Point(0, 106);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(208, 485);
+            this.panel2.Size = new System.Drawing.Size(208, 510);
             this.panel2.TabIndex = 1;
             // 
             // pnlLogout
@@ -388,23 +400,24 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Gold;
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(208, 579);
+            this.panel3.Location = new System.Drawing.Point(208, 604);
             this.panel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(889, 12);
+            this.panel3.Size = new System.Drawing.Size(954, 12);
             this.panel3.TabIndex = 2;
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.Gold;
             this.panel5.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel5.Location = new System.Drawing.Point(1085, 106);
+            this.panel5.Location = new System.Drawing.Point(1150, 106);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(12, 473);
+            this.panel5.Size = new System.Drawing.Size(12, 498);
             this.panel5.TabIndex = 3;
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.ucDefault1);
             this.panel6.Controls.Add(this.ucAgent1);
             this.panel6.Controls.Add(this.ucAgency1);
             this.panel6.Controls.Add(this.ucSurbub1);
@@ -417,11 +430,18 @@
             this.panel6.Size = new System.Drawing.Size(768, 453);
             this.panel6.TabIndex = 4;
             // 
+            // ucDefault1
+            // 
+            this.ucDefault1.Location = new System.Drawing.Point(21, 8);
+            this.ucDefault1.Name = "ucDefault1";
+            this.ucDefault1.Size = new System.Drawing.Size(786, 468);
+            this.ucDefault1.TabIndex = 7;
+            // 
             // ucAgent1
             // 
-            this.ucAgent1.Location = new System.Drawing.Point(30, 5);
+            this.ucAgent1.Location = new System.Drawing.Point(21, 5);
             this.ucAgent1.Name = "ucAgent1";
-            this.ucAgent1.Size = new System.Drawing.Size(768, 453);
+            this.ucAgent1.Size = new System.Drawing.Size(769, 453);
             this.ucAgent1.TabIndex = 6;
             // 
             // ucAgency1
@@ -466,42 +486,33 @@
             this.ucPropertyType1.Size = new System.Drawing.Size(768, 453);
             this.ucPropertyType1.TabIndex = 0;
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(903, 39);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 34);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
-            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.ClientSize = new System.Drawing.Size(1097, 591);
+            this.ClientSize = new System.Drawing.Size(1162, 616);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmAdmin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.frmAdmin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel6.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -546,6 +557,7 @@
         private System.Windows.Forms.Label lblFullname;
         private System.Windows.Forms.Label lblAdminID;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private ucDefault ucDefault1;
     }
 }
 

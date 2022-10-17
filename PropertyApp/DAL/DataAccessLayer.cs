@@ -307,6 +307,7 @@ namespace DAL
             dbCmd.Parameters.AddWithValue("Password", ten.Password);
             dbCmd.Parameters.AddWithValue("@Phone", ten.Phone);
             dbCmd.Parameters.AddWithValue("@Status", ten.Status);
+            dbCmd.Parameters.AddWithValue("@UserTypeID", ten.UserType);
 
             int x = dbCmd.ExecuteNonQuery();
             dbCon.Close();
@@ -351,6 +352,33 @@ namespace DAL
 
             dbCon.Close();
             return x;
+        }
+        //Property Agent
+        public int InsertPropertyAgent(PropertyAgent propAgent)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_InsertPropertyAgent", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Property", propAgent.Property);
+            dbCmd.Parameters.AddWithValue("@Agent", propAgent.Agent);
+            dbCmd.Parameters.AddWithValue("@Date", propAgent.Date);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public DataTable GetPropertyAgent()
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetPropertyAgent", dbCon);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
         }
         public DataTable Login(string email, string password)
         {

@@ -110,5 +110,21 @@ namespace PropertyApp
             cmbStatus.Items.Add("Unavailable");
         }
 
+        private void dgvProperty_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvProperty.SelectedRows.Count > 0)
+            {
+                txtDescription.Text = dgvProperty.SelectedRows[0].Cells["Description"].Value.ToString();
+                txtPrice.Text = "R" + dgvProperty.SelectedRows[0].Cells["Price"].Value.ToString();
+                cmbPropertyType.Text = dgvProperty.SelectedRows[0].Cells["PropertyType"].Value.ToString();
+                cmbSurbub.Text = dgvProperty.SelectedRows[0].Cells["Surbub"].Value.ToString();
+                cmbStatus.Text = dgvProperty.SelectedRows[0].Cells["Status"].Value.ToString();
+
+
+                byte[] image = (byte[])dgvProperty.SelectedRows[0].Cells["Image"].Value;
+                MemoryStream ms = new MemoryStream(image);
+                imgProperty.Image = Image.FromStream(ms);
+            }
+        }
     }
 }

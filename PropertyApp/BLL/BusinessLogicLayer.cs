@@ -117,6 +117,15 @@ namespace BLL
         {
             return dal.DeleteTenant(tenantId);
         }
+        //PropertyAgent
+        public int InsertPropertyAgent(PropertyAgent pa)
+        {
+            return dal.InsertPropertyAgent(pa);
+        }
+        public DataTable GetPropertyAgent()
+        {
+            return dal.GetPropertyAgent();
+        }
         //Login
         public DataTable Login(string email, string password)
         {

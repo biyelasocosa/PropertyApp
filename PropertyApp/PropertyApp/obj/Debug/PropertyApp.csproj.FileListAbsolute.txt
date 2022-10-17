@@ -46,3 +46,7 @@ C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debu
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.frmTenant.resources
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.ucRental.resources
 C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.ucTenant.resources
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.ucDefault.resources
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.ucPropertyAgent.resources
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.frmRegister.resources
+C:\Users\Biyela Socosa\source\repos\PropertyApp\PropertyApp\PropertyApp\obj\Debug\PropertyApp.ucPropertyList.resources

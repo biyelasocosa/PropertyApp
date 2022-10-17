@@ -89,6 +89,7 @@
             this.dgvProperty.Name = "dgvProperty";
             this.dgvProperty.Size = new System.Drawing.Size(715, 188);
             this.dgvProperty.TabIndex = 19;
+            this.dgvProperty.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvProperty_CellClick);
             // 
             // btnDelete
             // 
@@ -132,19 +133,20 @@
             // 
             // btnInsert
             // 
-            this.btnInsert.Location = new System.Drawing.Point(660, 106);
+            this.btnInsert.Location = new System.Drawing.Point(660, 125);
             this.btnInsert.Name = "btnInsert";
             this.btnInsert.Size = new System.Drawing.Size(71, 29);
             this.btnInsert.TabIndex = 14;
             this.btnInsert.Text = "Insert";
             this.btnInsert.UseVisualStyleBackColor = true;
+            this.btnInsert.Visible = false;
             this.btnInsert.Click += new System.EventHandler(this.btnInsert_Click);
             // 
             // btnBrowse
             // 
-            this.btnBrowse.Location = new System.Drawing.Point(660, 66);
+            this.btnBrowse.Location = new System.Drawing.Point(653, 66);
             this.btnBrowse.Name = "btnBrowse";
-            this.btnBrowse.Size = new System.Drawing.Size(68, 25);
+            this.btnBrowse.Size = new System.Drawing.Size(84, 31);
             this.btnBrowse.TabIndex = 13;
             this.btnBrowse.Text = "Browse";
             this.btnBrowse.UseVisualStyleBackColor = true;

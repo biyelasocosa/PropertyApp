@@ -23,6 +23,8 @@ namespace PropertyApp
             lblAdminID.Text = dt.Rows[0]["UserID"].ToString();
             lblFullname.Text = dt.Rows[0]["Name"].ToString() + " " + dt.Rows[0]["Surname"].ToString();
             lblUser.Text = "(" + dt.Rows[0]["Description"].ToString() + ")";
+
+            ucDefault1.BringToFront();
         }
 
         private void btnPropertyType_Click(object sender, EventArgs e)
@@ -123,6 +125,12 @@ namespace PropertyApp
             frmLogin log = new frmLogin();
             log.Show();
             this.Hide();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            frmAdmin form = new frmAdmin();
+            form.Refresh();
         }
     }
 }

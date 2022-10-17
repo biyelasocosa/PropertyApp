@@ -63,5 +63,12 @@ namespace PropertyApp
                 lblError.Visible = true;
             }
         }
+
+        private void lnkRegister_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            frmRegister regist = new frmRegister();
+            regist.Show();
+            this.Hide();
+        }
     }
 }

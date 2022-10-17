@@ -15,7 +15,9 @@ namespace DAL
         public string Password { get; set; }
         public string Phone { get; set; }
         public string Status { get; set;}
-        public Tenant(string name, string surname, string email, string password, string phone, string status)
+        public int UserType { get; set; }
+
+        public Tenant(string name, string surname, string email, string password, string phone, string status, int user)
         {
             this.Name = name;
             this.Surname = surname;
@@ -23,6 +25,7 @@ namespace DAL
             this.Password = password;
             this.Phone = phone;
             this.Status = status;
+            this.UserType = user;
         }
         public Tenant(int id, string email, string phone, string status)
         {
