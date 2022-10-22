@@ -64,7 +64,7 @@ namespace PropertyApp
 
         private void btnPropertyAgent_Click(object sender, EventArgs e)
         {
-
+            ucPropertyAgent1.BringToFront();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

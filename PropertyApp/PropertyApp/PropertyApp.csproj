@@ -76,6 +76,12 @@
     <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmReport.Designer.cs">
+      <DependentUpon>frmReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmTenant.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,12 @@
     <Compile Include="ucDefault.Designer.cs">
       <DependentUpon>ucDefault.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucLocationReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucLocationReport.Designer.cs">
+      <DependentUpon>ucLocationReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ucPropertyAgent.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -101,6 +113,12 @@
     </Compile>
     <Compile Include="ucPropertyList.Designer.cs">
       <DependentUpon>ucPropertyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucPropertyReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucPropertyReport.Designer.cs">
+      <DependentUpon>ucPropertyReport.cs</DependentUpon>
     </Compile>
     <Compile Include="ucTenant.cs">
       <SubType>UserControl</SubType>
@@ -156,6 +174,18 @@
     <Compile Include="ucSurbub.Designer.cs">
       <DependentUpon>ucSurbub.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucUser.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucUser.Designer.cs">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucUserReport.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucUserReport.Designer.cs">
+      <DependentUpon>ucUserReport.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmAdmin.resx">
       <DependentUpon>frmAdmin.cs</DependentUpon>
     </EmbeddedResource>
@@ -167,6 +197,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmReport.resx">
+      <DependentUpon>frmReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTenant.resx">
       <DependentUpon>frmTenant.cs</DependentUpon>
@@ -183,11 +216,17 @@
     <EmbeddedResource Include="ucDefault.resx">
       <DependentUpon>ucDefault.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ucLocationReport.resx">
+      <DependentUpon>ucLocationReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ucPropertyAgent.resx">
       <DependentUpon>ucPropertyAgent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucPropertyList.resx">
       <DependentUpon>ucPropertyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucPropertyReport.resx">
+      <DependentUpon>ucPropertyReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ucTenant.resx">
       <DependentUpon>ucTenant.cs</DependentUpon>
@@ -215,6 +254,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ucSurbub.resx">
       <DependentUpon>ucSurbub.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucUser.resx">
+      <DependentUpon>ucUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucUserReport.resx">
+      <DependentUpon>ucUserReport.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -27,6 +27,7 @@ namespace PropertyApp
         private void ucPropertyAgent_Load(object sender, EventArgs e)
         {
             LoadcmbProperty();
+            LoadcmbAgent();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

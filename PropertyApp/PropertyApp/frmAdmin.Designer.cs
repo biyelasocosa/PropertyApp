@@ -68,6 +68,8 @@
             this.ucProvince1 = new PropertyApp.ucProvince();
             this.ucProperty1 = new PropertyApp.ucProperty();
             this.ucPropertyType1 = new PropertyApp.ucPropertyType();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btnUser = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
@@ -192,8 +194,12 @@
             // 
             // panel2
             // 
+            this.panel2.AllowDrop = true;
+            this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.pnlLogout);
+            this.panel2.Controls.Add(this.btnUser);
             this.panel2.Controls.Add(this.pnlAgent);
             this.panel2.Controls.Add(this.pnlAgency);
             this.panel2.Controls.Add(this.pnlSurbub);
@@ -220,7 +226,7 @@
             // pnlLogout
             // 
             this.pnlLogout.BackColor = System.Drawing.Color.MidnightBlue;
-            this.pnlLogout.Location = new System.Drawing.Point(3, 400);
+            this.pnlLogout.Location = new System.Drawing.Point(3, 452);
             this.pnlLogout.Name = "pnlLogout";
             this.pnlLogout.Size = new System.Drawing.Size(10, 47);
             this.pnlLogout.TabIndex = 10;
@@ -312,7 +318,7 @@
             this.btnLog.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLog.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
             this.btnLog.ForeColor = System.Drawing.Color.Gold;
-            this.btnLog.Location = new System.Drawing.Point(14, 400);
+            this.btnLog.Location = new System.Drawing.Point(14, 451);
             this.btnLog.Name = "btnLog";
             this.btnLog.Size = new System.Drawing.Size(187, 48);
             this.btnLog.TabIndex = 6;
@@ -486,6 +492,26 @@
             this.ucPropertyType1.Size = new System.Drawing.Size(768, 453);
             this.ucPropertyType1.TabIndex = 0;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel8.Location = new System.Drawing.Point(3, 401);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 47);
+            this.panel8.TabIndex = 12;
+            // 
+            // btnUser
+            // 
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
+            this.btnUser.ForeColor = System.Drawing.Color.Gold;
+            this.btnUser.Location = new System.Drawing.Point(14, 399);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(187, 48);
+            this.btnUser.TabIndex = 11;
+            this.btnUser.Text = "User";
+            this.btnUser.UseVisualStyleBackColor = true;
+            // 
             // frmAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -558,6 +584,8 @@
         private System.Windows.Forms.Label lblAdminID;
         private System.Windows.Forms.PictureBox pictureBox2;
         private ucDefault ucDefault1;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Button btnUser;
     }
 }
 

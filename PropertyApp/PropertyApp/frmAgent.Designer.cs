@@ -56,6 +56,7 @@
             this.ucProperty1 = new PropertyApp.ucProperty();
             this.ucDefault1 = new PropertyApp.ucDefault();
             this.ucAgent1 = new PropertyApp.ucAgent();
+            this.ucPropertyAgent1 = new PropertyApp.ucPropertyAgent();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
@@ -349,16 +350,24 @@
             // 
             // ucAgent1
             // 
-            this.ucAgent1.Location = new System.Drawing.Point(329, 126);
+            this.ucAgent1.Location = new System.Drawing.Point(326, 126);
             this.ucAgent1.Name = "ucAgent1";
             this.ucAgent1.Size = new System.Drawing.Size(768, 453);
             this.ucAgent1.TabIndex = 8;
+            // 
+            // ucPropertyAgent1
+            // 
+            this.ucPropertyAgent1.Location = new System.Drawing.Point(327, 122);
+            this.ucPropertyAgent1.Name = "ucPropertyAgent1";
+            this.ucPropertyAgent1.Size = new System.Drawing.Size(768, 453);
+            this.ucPropertyAgent1.TabIndex = 9;
             // 
             // frmAgent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 616);
+            this.Controls.Add(this.ucPropertyAgent1);
             this.Controls.Add(this.ucAgent1);
             this.Controls.Add(this.ucDefault1);
             this.Controls.Add(this.ucRental1);
@@ -413,5 +422,6 @@
         private System.Windows.Forms.Panel pnlAgent;
         private System.Windows.Forms.Button btnPropertyAgent;
         private ucAgent ucAgent1;
+        private ucPropertyAgent ucPropertyAgent1;
     }
 }

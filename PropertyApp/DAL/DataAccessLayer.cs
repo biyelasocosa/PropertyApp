@@ -396,6 +396,140 @@ namespace DAL
             dbCon.Close();
             return dt;
         }
+        //User
+        public DataTable GetUser()
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetUser", dbCon);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public DataTable LoadUserType()
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_LoadUserType", dbCon);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+
+        //Report
+        public DataTable GetUserByStatus(string status)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetUserByStatus", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Status", status);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public DataTable GetUserType(int usertype)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetUserType", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@UserType", usertype);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public DataTable GetPropertyByDesc(string desc)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetPropertyByDesc", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Desc", desc);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public DataTable GetByPropertyType(int propertytype)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetByPropertyType", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@PropertyType", propertytype);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public DataTable GetByCityDesc(string desc)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetByCityDesc", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Desc", desc);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public DataTable GetBySurbubDesc(string desc)
+        {
+
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetBySurbubDesc", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Desc", desc);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
+        public DataTable GetCityByProvince(int prov)
+        {
+
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetCityByProvince", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Province", prov);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
 
 
     }

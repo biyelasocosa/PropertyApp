@@ -131,5 +131,44 @@ namespace BLL
         {
             return dal.Login(email, password);
         }
+        //User
+        public DataTable GetUser()
+        {
+            return dal.GetUser();
+        }
+        public DataTable LoadUserType()
+        {
+            return dal.LoadUserType();
+        }
+        //Report
+        public DataTable GetUserByStatus(string status)
+        {
+            return dal.GetUserByStatus(status);
+        }
+        public DataTable GetUserType(int usertype)
+        {
+            return dal.GetUserType(usertype);
+        }
+        public DataTable GetPropertyByDesc(string desc)
+        {
+            return dal.GetPropertyByDesc(desc);
+        }
+        public DataTable GetByPropertyType(int propertytype)
+        {
+            return dal.GetByPropertyType(propertytype);
+        }
+
+        public DataTable GetByCityDesc(string desc)
+        {
+            return dal.GetByCityDesc(desc);
+        }
+        public DataTable GetBySurbubDesc(string desc)
+        {
+            return dal.GetBySurbubDesc(desc);
+        }
+        public DataTable GetCityByProvince(int prov)
+        {
+            return dal.GetCityByProvince(prov);
+        }
     }
 }
