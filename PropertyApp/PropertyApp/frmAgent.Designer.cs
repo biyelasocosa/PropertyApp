@@ -84,9 +84,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(923, 34);
+            this.pictureBox2.Location = new System.Drawing.Point(933, 34);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(38, 34);
+            this.pictureBox2.Size = new System.Drawing.Size(35, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 3;
             this.pictureBox2.TabStop = false;
@@ -97,9 +97,9 @@
             this.panel7.Controls.Add(this.lblUser);
             this.panel7.Controls.Add(this.lblFullname);
             this.panel7.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel7.Location = new System.Drawing.Point(961, 35);
+            this.panel7.Location = new System.Drawing.Point(971, 18);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(145, 33);
+            this.panel7.Size = new System.Drawing.Size(150, 57);
             this.panel7.TabIndex = 7;
             // 
             // lblUser
@@ -107,7 +107,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Mongolian Baiti", 10.75F);
             this.lblUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUser.Location = new System.Drawing.Point(82, 9);
+            this.lblUser.Location = new System.Drawing.Point(19, 11);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(37, 16);
             this.lblUser.TabIndex = 2;
@@ -119,7 +119,7 @@
             this.lblFullname.BackColor = System.Drawing.Color.Transparent;
             this.lblFullname.Font = new System.Drawing.Font("Mongolian Baiti", 10.75F);
             this.lblFullname.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFullname.Location = new System.Drawing.Point(7, 9);
+            this.lblFullname.Location = new System.Drawing.Point(7, 33);
             this.lblFullname.Name = "lblFullname";
             this.lblFullname.Size = new System.Drawing.Size(69, 16);
             this.lblFullname.TabIndex = 1;
@@ -129,7 +129,7 @@
             // 
             this.lblUserID.AutoSize = true;
             this.lblUserID.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblUserID.Location = new System.Drawing.Point(971, 19);
+            this.lblUserID.Location = new System.Drawing.Point(941, 18);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(18, 13);
             this.lblUserID.TabIndex = 0;

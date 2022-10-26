@@ -35,8 +35,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.dgvReport = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSoft = new System.Windows.Forms.Button();
             this.btnHard = new System.Windows.Forms.Button();
+            this.btnSoft = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvReport)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,7 @@
             this.cmbUserStatus.Name = "cmbUserStatus";
             this.cmbUserStatus.Size = new System.Drawing.Size(247, 24);
             this.cmbUserStatus.TabIndex = 6;
+            this.cmbUserStatus.SelectedIndexChanged += new System.EventHandler(this.cmbUserStatus_SelectedIndexChanged);
             // 
             // label3
             // 
@@ -90,6 +91,7 @@
             this.label3.Size = new System.Drawing.Size(144, 16);
             this.label3.TabIndex = 5;
             this.label3.Text = "Filter User By Status:\r\n";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // dgvReport
             // 
@@ -115,16 +117,7 @@
             this.groupBox1.TabIndex = 10;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "User";
-            // 
-            // btnSoft
-            // 
-            this.btnSoft.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSoft.Location = new System.Drawing.Point(38, 64);
-            this.btnSoft.Name = "btnSoft";
-            this.btnSoft.Size = new System.Drawing.Size(105, 33);
-            this.btnSoft.TabIndex = 10;
-            this.btnSoft.Text = "Soft Delete";
-            this.btnSoft.UseVisualStyleBackColor = true;
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // btnHard
             // 
@@ -135,6 +128,16 @@
             this.btnHard.TabIndex = 11;
             this.btnHard.Text = "Hard Delete";
             this.btnHard.UseVisualStyleBackColor = true;
+            // 
+            // btnSoft
+            // 
+            this.btnSoft.Font = new System.Drawing.Font("Mongolian Baiti", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSoft.Location = new System.Drawing.Point(38, 64);
+            this.btnSoft.Name = "btnSoft";
+            this.btnSoft.Size = new System.Drawing.Size(105, 33);
+            this.btnSoft.TabIndex = 10;
+            this.btnSoft.Text = "Soft Delete";
+            this.btnSoft.UseVisualStyleBackColor = true;
             // 
             // ucUserReport
             // 

@@ -38,5 +38,12 @@ namespace PropertyApp
         {
             ucLocationReport1.BringToFront();
         }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            frmAdmin admin = new frmAdmin();
+            admin.Show();
+            this.Hide();
+        }
     }
 }

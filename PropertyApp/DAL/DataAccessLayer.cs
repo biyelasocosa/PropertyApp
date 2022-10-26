@@ -396,6 +396,60 @@ namespace DAL
             dbCon.Close();
             return dt;
         }
+        //Admin
+        public int InsertAdmin(Admin admin)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_InsertAdmin", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Name", admin.Name);
+            dbCmd.Parameters.AddWithValue("@Surname", admin.Surname);
+            dbCmd.Parameters.AddWithValue("@Email", admin.Email);
+            dbCmd.Parameters.AddWithValue("Password", admin.Password);
+            dbCmd.Parameters.AddWithValue("@Status", admin.Status);
+            dbCmd.Parameters.AddWithValue("@UserType", admin.UserType);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public int UpdateAdmin(int adminid)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_UpdateAdmin", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Admin", adminid);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public int DeleteAdmin(int adminid)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_DeleteAdmin", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@Admin", adminid);
+            int x = dbCmd.ExecuteNonQuery();
+
+            dbCon.Close();
+            return x;
+        }
+        public DataTable GetAdmin()
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetAdmin", dbCon);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
         //User
         public DataTable GetUser()
         {
@@ -409,7 +463,32 @@ namespace DAL
             dbCon.Close();
             return dt;
         }
-        public DataTable LoadUserType()
+        public int SoftDelete(int userid, string status)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_SoftDelete", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@User", userid);
+            dbCmd.Parameters.AddWithValue("@Status", status);
+
+            int x = dbCmd.ExecuteNonQuery();
+            dbCon.Close();
+            return x;
+        }
+        public int HardDelete(int userid)
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_HardDelete", dbCon);
+            dbCmd.CommandType = CommandType.StoredProcedure;
+
+            dbCmd.Parameters.AddWithValue("@User", userid);
+            int x = dbCmd.ExecuteNonQuery();
+
+            dbCon.Close();
+            return x;
+        }
+            public DataTable LoadUserType()
         {
             dbCon.Open();
             dbCmd = new SqlCommand("sp_LoadUserType", dbCon);

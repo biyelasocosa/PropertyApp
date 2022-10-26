@@ -131,11 +131,37 @@ namespace BLL
         {
             return dal.Login(email, password);
         }
+        //Admin
+        public int InsertAdmin(Admin admin)
+        {
+            return dal.InsertAdmin(admin);
+        }
+        public int UpdateAdmin(int adminid)
+        {
+            return dal.UpdateAdmin(adminid);
+        }
+        public int DeleteAdmin(int adminid)
+        {
+            return dal.DeleteAdmin(adminid);
+        }
+        public DataTable GetAdmin()
+        {
+            return dal.GetAdmin();
+        }
         //User
         public DataTable GetUser()
         {
             return dal.GetUser();
         }
+        public int SoftDelete(int userid, string status)
+        {
+            return dal.SoftDelete(userid, status);
+        }
+        public int HardDelete(int userid)
+        {
+            return dal.HardDelete(userid);
+        }
+
         public DataTable LoadUserType()
         {
             return dal.LoadUserType();

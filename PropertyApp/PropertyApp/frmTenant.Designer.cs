@@ -53,6 +53,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.ucDefault1 = new PropertyApp.ucDefault();
             this.ucPropertyList1 = new PropertyApp.ucPropertyList();
+            this.ucApply1 = new PropertyApp.ucApply();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
@@ -80,7 +81,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(904, 35);
+            this.pictureBox2.Location = new System.Drawing.Point(955, 34);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -92,16 +93,16 @@
             this.panel7.Controls.Add(this.lblUser);
             this.panel7.Controls.Add(this.lblFullname);
             this.panel7.Font = new System.Drawing.Font("Mongolian Baiti", 10.25F);
-            this.panel7.Location = new System.Drawing.Point(942, 36);
+            this.panel7.Location = new System.Drawing.Point(993, 18);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(165, 32);
+            this.panel7.Size = new System.Drawing.Size(142, 50);
             this.panel7.TabIndex = 8;
             // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUser.Location = new System.Drawing.Point(106, 9);
+            this.lblUser.Location = new System.Drawing.Point(20, 13);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(33, 15);
             this.lblUser.TabIndex = 2;
@@ -111,7 +112,7 @@
             // 
             this.lblFullname.AutoSize = true;
             this.lblFullname.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFullname.Location = new System.Drawing.Point(9, 9);
+            this.lblFullname.Location = new System.Drawing.Point(10, 31);
             this.lblFullname.Name = "lblFullname";
             this.lblFullname.Size = new System.Drawing.Size(63, 15);
             this.lblFullname.TabIndex = 1;
@@ -132,7 +133,7 @@
             // 
             this.lblUserID.AutoSize = true;
             this.lblUserID.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUserID.Location = new System.Drawing.Point(955, 20);
+            this.lblUserID.Location = new System.Drawing.Point(964, 18);
             this.lblUserID.Name = "lblUserID";
             this.lblUserID.Size = new System.Drawing.Size(18, 13);
             this.lblUserID.TabIndex = 0;
@@ -317,11 +318,19 @@
             this.ucPropertyList1.Size = new System.Drawing.Size(768, 453);
             this.ucPropertyList1.TabIndex = 6;
             // 
+            // ucApply1
+            // 
+            this.ucApply1.Location = new System.Drawing.Point(323, 130);
+            this.ucApply1.Name = "ucApply1";
+            this.ucApply1.Size = new System.Drawing.Size(768, 453);
+            this.ucApply1.TabIndex = 7;
+            // 
             // frmTenant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1162, 616);
+            this.Controls.Add(this.ucApply1);
             this.Controls.Add(this.ucPropertyList1);
             this.Controls.Add(this.ucDefault1);
             this.Controls.Add(this.panel5);
@@ -371,5 +380,6 @@
         private System.Windows.Forms.Button btnProperty;
         private ucDefault ucDefault1;
         private ucPropertyList ucPropertyList1;
+        private ucApply ucApply1;
     }
 }

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdmin));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnReport = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lblUser = new System.Windows.Forms.Label();
@@ -40,7 +41,9 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
             this.pnlLogout = new System.Windows.Forms.Panel();
+            this.btnUser = new System.Windows.Forms.Button();
             this.pnlAgent = new System.Windows.Forms.Panel();
             this.pnlAgency = new System.Windows.Forms.Panel();
             this.pnlSurbub = new System.Windows.Forms.Panel();
@@ -68,8 +71,7 @@
             this.ucProvince1 = new PropertyApp.ucProvince();
             this.ucProperty1 = new PropertyApp.ucProperty();
             this.ucPropertyType1 = new PropertyApp.ucPropertyType();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.btnUser = new System.Windows.Forms.Button();
+            this.ucUser1 = new PropertyApp.ucUser();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel7.SuspendLayout();
@@ -81,6 +83,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.btnReport);
             this.panel1.Controls.Add(this.pictureBox2);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.label3);
@@ -95,10 +98,24 @@
             this.panel1.Size = new System.Drawing.Size(1162, 106);
             this.panel1.TabIndex = 0;
             // 
+            // btnReport
+            // 
+            this.btnReport.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReport.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
+            this.btnReport.ForeColor = System.Drawing.Color.Gold;
+            this.btnReport.Location = new System.Drawing.Point(877, 35);
+            this.btnReport.Name = "btnReport";
+            this.btnReport.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnReport.Size = new System.Drawing.Size(86, 33);
+            this.btnReport.TabIndex = 13;
+            this.btnReport.Text = "Report";
+            this.btnReport.UseVisualStyleBackColor = false;
+            this.btnReport.Click += new System.EventHandler(this.btnReport_Click);
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(934, 39);
+            this.pictureBox2.Location = new System.Drawing.Point(978, 35);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(38, 34);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,9 +127,9 @@
             this.panel7.Controls.Add(this.lblUser);
             this.panel7.Controls.Add(this.lblFullname);
             this.panel7.Font = new System.Drawing.Font("Mongolian Baiti", 10.25F);
-            this.panel7.Location = new System.Drawing.Point(973, 40);
+            this.panel7.Location = new System.Drawing.Point(1017, 26);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(150, 32);
+            this.panel7.Size = new System.Drawing.Size(114, 49);
             this.panel7.TabIndex = 6;
             // 
             // lblUser
@@ -120,7 +137,7 @@
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Mongolian Baiti", 10.25F);
             this.lblUser.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblUser.Location = new System.Drawing.Point(92, 9);
+            this.lblUser.Location = new System.Drawing.Point(20, 10);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(33, 15);
             this.lblUser.TabIndex = 2;
@@ -131,7 +148,7 @@
             this.lblFullname.AutoSize = true;
             this.lblFullname.Font = new System.Drawing.Font("Mongolian Baiti", 10.25F);
             this.lblFullname.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblFullname.Location = new System.Drawing.Point(4, 9);
+            this.lblFullname.Location = new System.Drawing.Point(4, 30);
             this.lblFullname.Name = "lblFullname";
             this.lblFullname.Size = new System.Drawing.Size(63, 15);
             this.lblFullname.TabIndex = 1;
@@ -152,7 +169,7 @@
             // 
             this.lblAdminID.AutoSize = true;
             this.lblAdminID.ForeColor = System.Drawing.SystemColors.Control;
-            this.lblAdminID.Location = new System.Drawing.Point(990, 26);
+            this.lblAdminID.Location = new System.Drawing.Point(986, 19);
             this.lblAdminID.Name = "lblAdminID";
             this.lblAdminID.Size = new System.Drawing.Size(18, 13);
             this.lblAdminID.TabIndex = 0;
@@ -223,6 +240,14 @@
             this.panel2.Size = new System.Drawing.Size(208, 510);
             this.panel2.TabIndex = 1;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel8.Location = new System.Drawing.Point(3, 401);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(10, 47);
+            this.panel8.TabIndex = 12;
+            // 
             // pnlLogout
             // 
             this.pnlLogout.BackColor = System.Drawing.Color.MidnightBlue;
@@ -230,6 +255,19 @@
             this.pnlLogout.Name = "pnlLogout";
             this.pnlLogout.Size = new System.Drawing.Size(10, 47);
             this.pnlLogout.TabIndex = 10;
+            // 
+            // btnUser
+            // 
+            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUser.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
+            this.btnUser.ForeColor = System.Drawing.Color.Gold;
+            this.btnUser.Location = new System.Drawing.Point(14, 399);
+            this.btnUser.Name = "btnUser";
+            this.btnUser.Size = new System.Drawing.Size(187, 48);
+            this.btnUser.TabIndex = 11;
+            this.btnUser.Text = "User";
+            this.btnUser.UseVisualStyleBackColor = true;
+            this.btnUser.Click += new System.EventHandler(this.btnUser_Click);
             // 
             // pnlAgent
             // 
@@ -423,6 +461,7 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.ucUser1);
             this.panel6.Controls.Add(this.ucDefault1);
             this.panel6.Controls.Add(this.ucAgent1);
             this.panel6.Controls.Add(this.ucAgency1);
@@ -492,25 +531,12 @@
             this.ucPropertyType1.Size = new System.Drawing.Size(768, 453);
             this.ucPropertyType1.TabIndex = 0;
             // 
-            // panel8
+            // ucUser1
             // 
-            this.panel8.BackColor = System.Drawing.Color.MidnightBlue;
-            this.panel8.Location = new System.Drawing.Point(3, 401);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(10, 47);
-            this.panel8.TabIndex = 12;
-            // 
-            // btnUser
-            // 
-            this.btnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnUser.Font = new System.Drawing.Font("Mongolian Baiti", 10F);
-            this.btnUser.ForeColor = System.Drawing.Color.Gold;
-            this.btnUser.Location = new System.Drawing.Point(14, 399);
-            this.btnUser.Name = "btnUser";
-            this.btnUser.Size = new System.Drawing.Size(187, 48);
-            this.btnUser.TabIndex = 11;
-            this.btnUser.Text = "User";
-            this.btnUser.UseVisualStyleBackColor = true;
+            this.ucUser1.Location = new System.Drawing.Point(22, 13);
+            this.ucUser1.Name = "ucUser1";
+            this.ucUser1.Size = new System.Drawing.Size(768, 453);
+            this.ucUser1.TabIndex = 8;
             // 
             // frmAdmin
             // 
@@ -586,6 +612,8 @@
         private ucDefault ucDefault1;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Button btnUser;
+        private System.Windows.Forms.Button btnReport;
+        private ucUser ucUser1;
     }
 }
 

@@ -19,7 +19,7 @@ namespace PropertyApp
 
         private void btnApply_Click(object sender, EventArgs e)
         {
-            //ucTenant1.BringToFront();
+            ucApply1.BringToFront();
         }
 
         private void frmTenant_Load(object sender, EventArgs e)

@@ -33,6 +33,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnRental = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnExit = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnUser = new System.Windows.Forms.Button();
@@ -74,12 +75,25 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MidnightBlue;
+            this.panel1.Controls.Add(this.btnExit);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(945, 62);
             this.panel1.TabIndex = 0;
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.ForeColor = System.Drawing.Color.Gold;
+            this.btnExit.Location = new System.Drawing.Point(874, 16);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(41, 34);
+            this.btnExit.TabIndex = 11;
+            this.btnExit.Text = "Exit";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label1
             // 
@@ -195,5 +209,6 @@
         private ucUserReport ucUserReport1;
         private ucPropertyReport ucPropertyReport1;
         private ucLocationReport ucLocationReport1;
+        private System.Windows.Forms.Button btnExit;
     }
 }

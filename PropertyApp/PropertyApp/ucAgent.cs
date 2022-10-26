@@ -84,8 +84,8 @@ namespace PropertyApp
         {
             if(dgvAgent.SelectedRows.Count > 0)
             {
-                txtName.Text = dgvAgent.SelectedRows[0].Cells["Name"].Value.ToString();
-                txtSurname.Text = dgvAgent.SelectedRows[0].Cells["Surname"].Value.ToString(); 
+                //txtName.Text = dgvAgent.SelectedRows[0].Cells["Name"].Value.ToString();
+                //txtSurname.Text = dgvAgent.SelectedRows[0].Cells["Surname"].Value.ToString(); 
                 txtEmail.Text = dgvAgent.SelectedRows[0].Cells["Email"].Value.ToString();
                 txtPassword.Text = dgvAgent.SelectedRows[0].Cells["Password"].Value.ToString();
                 txtPhone.Text = dgvAgent.SelectedRows[0].Cells["Phone"].Value.ToString();

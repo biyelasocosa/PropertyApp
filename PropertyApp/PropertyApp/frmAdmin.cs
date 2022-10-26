@@ -132,5 +132,17 @@ namespace PropertyApp
             frmAdmin form = new frmAdmin();
             form.Refresh();
         }
+
+        private void btnReport_Click(object sender, EventArgs e)
+        {
+            frmReport report = new frmReport();
+            report.Show();
+            this.Hide();
+        }
+
+        private void btnUser_Click(object sender, EventArgs e)
+        {
+            ucUser1.BringToFront();
+        }
     }
 }
