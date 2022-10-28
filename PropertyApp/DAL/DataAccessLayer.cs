@@ -294,6 +294,18 @@ namespace DAL
             dbCon.Close();
             return dt;
         }
+        public DataTable GetRentalProperty()
+        {
+            dbCon.Open();
+            dbCmd = new SqlCommand("sp_GetRentalProperty", dbCon);
+
+            dbAdapter = new SqlDataAdapter(dbCmd);
+            dt = new DataTable();
+            dbAdapter.Fill(dt);
+
+            dbCon.Close();
+            return dt;
+        }
         //Tenant
         public int InsertTenant(Tenant ten)
         {
@@ -380,6 +392,7 @@ namespace DAL
             dbCon.Close();
             return dt;
         }
+        
         public DataTable Login(string email, string password)
         {
             dbCon.Open();

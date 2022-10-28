@@ -19,15 +19,15 @@ namespace PropertyApp
             InitializeComponent();
         }
         BusinessLogicLayer bll = new BusinessLogicLayer();
-        public void LoadcmbProperty()
+        public void LoadcmbPropertyAgent()
         {
-            cmbProperty.DataSource = bll.GetProperty();
-            cmbProperty.DisplayMember = "Description";
-            cmbProperty.ValueMember = "PropertyID";
+            cmbProperty.DataSource = bll.GetPropertyAgent();
+            cmbProperty.DisplayMember = "PropertyAgent";
+            cmbProperty.ValueMember = "PropertyAgentID";
         }
         public void LoadcmbTenant()
         {
-            //cmbTenant.DataSource = bll.GetTenant();
+            cmbTenant.DataSource = bll.GetTenant();
             cmbTenant.DisplayMember = "FullName";
             cmbTenant.ValueMember = "TenantID";
         }
@@ -44,8 +44,8 @@ namespace PropertyApp
 
         private void ucRental_Load(object sender, EventArgs e)
         {
-            //LoadcmbProperty();
-            //LoadcmbTenant();
+            LoadcmbPropertyAgent();
+            LoadcmbTenant();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)

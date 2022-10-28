@@ -42,5 +42,12 @@ namespace PropertyApp
             frmTenant form = new frmTenant();
             form.Refresh();
         }
+
+        private void btnLog_Click(object sender, EventArgs e)
+        {
+            frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
+        }
     }
 }

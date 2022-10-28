@@ -248,6 +248,7 @@
             this.btnLog.TabIndex = 6;
             this.btnLog.Text = "Logout";
             this.btnLog.UseVisualStyleBackColor = true;
+            this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
             // btnProfile
             // 
@@ -320,7 +321,7 @@
             // 
             // ucApply1
             // 
-            this.ucApply1.Location = new System.Drawing.Point(323, 130);
+            this.ucApply1.Location = new System.Drawing.Point(307, 127);
             this.ucApply1.Name = "ucApply1";
             this.ucApply1.Size = new System.Drawing.Size(768, 453);
             this.ucApply1.TabIndex = 7;

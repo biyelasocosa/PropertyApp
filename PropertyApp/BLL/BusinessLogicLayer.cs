@@ -100,6 +100,10 @@ namespace BLL
         {
             return dal.GetRental();
         }
+        public DataTable GetRentalProperty()
+        {
+            return dal.GetRentalProperty();
+        }
         //Tenant
         public int InsertTenant(Tenant ten)
         {

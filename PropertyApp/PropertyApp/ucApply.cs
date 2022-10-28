@@ -23,7 +23,7 @@ namespace PropertyApp
         BusinessLogicLayer bll = new BusinessLogicLayer();
         private void ucApply_Load(object sender, EventArgs e)
         {
-            dgvRental.DataSource = bll.GetProperty();
+            dgvRental.DataSource = bll.GetRentalProperty();
             dgvRental.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
@@ -64,7 +64,7 @@ namespace PropertyApp
         {
             if (dgvRental.SelectedRows.Count > 0)
             {
-                lblID.Text = dgvRental.SelectedRows[0].Cells["PropertyID"].Value.ToString();
+                lblID.Text = dgvRental.SelectedRows[0].Cells["PropertyAgentID"].Value.ToString();
 
                 byte[] image = (byte[])dgvRental.SelectedRows[0].Cells["Image"].Value;
                 MemoryStream ms = new MemoryStream(image);
